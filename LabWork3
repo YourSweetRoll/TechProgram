@@ -1,0 +1,49 @@
+#include "pch.h"
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	int C, NumArr,NumArr_1;
+	cout << "Enter the num of C " << endl;
+	cin >> C >> NumArr;
+	int **A = new int* [NumArr];		//Создаем
+	for (int i = 0; i < NumArr; i++)	//Двумерный
+	{
+		A[i] = new int[i+1];	//Массив
+	}
+
+	for (int i = 0; i < NumArr; i++)		//Пользователь вводит двумерный массив
+	{
+		for (int j = 0; j < NumArr; j++)
+		{
+			cout << "Enter the number" << "(" << j << ")" << ":";
+			cin >> A[i][j];
+		}
+	}
+
+	for (int i = 0; i < NumArr; i++)
+	{
+		for (int j = 0; j < NumArr; j++)
+		{
+			if (A[i][j] < 0)
+			{
+				A[i][j] = C;
+			}
+			
+		}
+
+		
+	}
+	for (int i = 0; i < NumArr; i++)
+	{
+		for (int j = 0; j < NumArr; j++)
+		{
+			cout << "Array: " << A[i][j] << endl;
+		}
+	}
+
+}
