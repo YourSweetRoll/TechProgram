@@ -1,0 +1,76 @@
+#include "pch.h"
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	int size = 5;
+	int *A = new int[size];
+	int *B = new int[size];
+	int R = 88, F = 99;
+	int neNumA = 0;	//Кол-во отрицательных чисел в массиве А
+	int neNumB = 0;
+	int firstNeA = -1; //Расположение первого отрицательного числа в массиве А
+	int firstNeB = -1;
+	for (int q = 0; q < size; q++) {
+		cout << "Enter the array A[" << q << "]" << endl;
+		cin >> A[q];
+	}
+	for (int w = 0; w < size; w++) {
+		cout << "Enter the array B[" << w << "]" << endl;
+		cin >> B[w];
+	}
+	for (int i = 0; i < 5; i++) {
+		if (A[i] < 0) {
+			neNumA++;
+			if (firstNeA == -1)
+			{
+				firstNeA = i;
+			}
+			else {
+				continue;
+			}
+		}
+		else
+		{
+			continue;
+		}
+	}
+
+	if (neNumA > 2) 
+	{
+		A[firstNeA] = R;
+	}
+	
+	// ====================================== 
+	for (int j = 0; j < 5; j++) {
+		if (B[j] >= 0) 
+		{
+			continue;
+		}
+		else
+		{
+			neNumB++;
+			if (firstNeB == -1)
+			{
+				firstNeB = j;
+			}
+		}
+	}
+
+	if (neNumB > 2) 
+	{
+		B[firstNeB] = F;
+	}
+
+	for (int e = 0; e < size; e++) {
+		cout << "Array A[" << e << "]: " << A[e] << endl;
+	}
+	for (int r = 0; r < size; r++) {
+		cout << "Array B[" << r << "]: " << B[r] << endl;
+	}
+	return 0;
+}
