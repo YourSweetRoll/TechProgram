@@ -1,0 +1,851 @@
+#include <iostream>
+#include <string>
+using namespace std; 
+
+struct PC
+{
+    string pcPurpose;        //Назначение ПК: Работа/Обучение/Развлечение/Хобби и творчество
+    string pcType;          //Тип ПК: Десктоп/Ноутбук/Смартфон
+    int cores;              //Кол-во ядер процессора
+    int coreFrequency;      //Частота процессора (МГц)
+
+    int coolerPower;        //Мощность кулера (Вт)
+
+    string motherChipset;   //Набор встроенных микросхем
+
+    string ramGeneration;   //Поколение ОЗУ
+    int ramMemory;
+    int ramFrequency;       //Частота ОЗУ (ГГц)
+    string romType;
+    int romMemory;          //Объем постоянной памяти (Гб)
+
+    int videoFrequency;     //Частота работы видеочипа
+    int videoMemoryVolume;  //Объем видеопамяти
+    string videoMemoryType; //Тип видеопамяти
+    string videoInterface;  //Интерфейс видеокарты
+
+    int powerUnitEnergy;    //Мощность блока питания
+
+    string OS;
+
+    int price;              //Цена
+};
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    PC arrPC[27];
+
+    arrPC[0].pcPurpose = "Work";
+    arrPC[0].pcType = "Desktop";
+    arrPC[0].cores = 6;
+    arrPC[0].coreFrequency = 3900;
+
+    arrPC[0].coolerPower = 180;
+
+    arrPC[0].motherChipset = "A520";
+
+    arrPC[0].ramGeneration = "DDR4";
+    arrPC[0].ramMemory = 16;
+    arrPC[0].ramFrequency = 3200;
+    arrPC[0].romType = "SSD";
+    arrPC[0].romMemory = 512;
+
+    arrPC[0].videoFrequency = 0;
+    arrPC[0].videoMemoryVolume = 0;
+    arrPC[0].videoMemoryType = "None";
+    arrPC[0].videoInterface = "None";
+
+    arrPC[0].powerUnitEnergy = 500;
+
+    arrPC[0].OS = "DOS";
+
+    arrPC[0].price = 39200;
+
+
+    arrPC[1].pcPurpose = "Work";
+    arrPC[1].pcType = "Desktop";
+    arrPC[1].cores = 4;
+    arrPC[1].coreFrequency = 3300;
+
+    arrPC[1].coolerPower = 130;
+
+    arrPC[1].motherChipset = "H610";
+
+    arrPC[1].ramGeneration = "DDR4";
+    arrPC[1].ramMemory = 8;
+    arrPC[1].ramFrequency = 2666;
+    arrPC[1].romType = "SSD";
+    arrPC[1].romMemory = 512;
+
+    arrPC[1].videoFrequency = 0;
+    arrPC[1].videoMemoryVolume = 0;
+    arrPC[1].videoMemoryType = "None";
+    arrPC[1].videoInterface = "None";
+
+    arrPC[1].powerUnitEnergy = 300;
+
+    arrPC[1].OS = "None";
+
+    arrPC[1].price = 30499;
+
+
+    arrPC[2].pcPurpose = "Work";
+    arrPC[2].pcType = "Desktop";
+    arrPC[2].cores = 2;
+    arrPC[2].coreFrequency = 4100;
+
+    arrPC[2].coolerPower = 120;
+
+    arrPC[2].motherChipset = "H470";
+
+    arrPC[2].ramGeneration = "DDR4";
+    arrPC[2].ramMemory = 8;
+    arrPC[2].ramFrequency = 2666;
+    arrPC[2].romType = "SSD";
+    arrPC[2].romMemory = 256;
+
+    arrPC[2].videoFrequency = 0;
+    arrPC[2].videoMemoryVolume = 0;
+    arrPC[2].videoMemoryType = "None";
+    arrPC[2].videoInterface = "None";
+
+    arrPC[2].powerUnitEnergy = 300;
+
+    arrPC[2].OS = "None";
+
+    arrPC[2].price = 21199;
+
+
+    arrPC[3].pcPurpose = "Work";
+    arrPC[3].pcType = "Laptop";
+    arrPC[3].cores = 8;
+    arrPC[3].coreFrequency = 3300;
+
+    arrPC[3].coolerPower = 80;
+
+    arrPC[3].motherChipset = "None";
+
+    arrPC[3].ramGeneration = "LPDDR4x";
+    arrPC[3].ramMemory = 16;
+    arrPC[3].ramFrequency = 4267;
+    arrPC[3].romType = "SSD";
+    arrPC[3].romMemory = 512;
+
+    arrPC[3].videoFrequency = 0;
+    arrPC[3].videoMemoryVolume = 0;
+    arrPC[3].videoMemoryType = "None";
+    arrPC[3].videoInterface = "None";
+
+    arrPC[3].powerUnitEnergy = 65;
+
+    arrPC[3].OS = "Windows 11";
+
+    arrPC[3].price = 59999;
+
+
+    arrPC[4].pcPurpose = "Work";
+    arrPC[4].pcType = "Laptop";
+    arrPC[4].cores = 4;
+    arrPC[4].coreFrequency = 2800;
+
+    arrPC[4].coolerPower = 80;
+
+    arrPC[4].motherChipset = "None";
+
+    arrPC[4].ramGeneration = "LPDDR5";
+    arrPC[4].ramMemory = 16;
+    arrPC[4].ramFrequency = 4800;
+    arrPC[4].romType = "SSD";
+    arrPC[4].romMemory = 512;
+
+    arrPC[4].videoFrequency = 0;
+    arrPC[4].videoMemoryVolume = 0;
+    arrPC[4].videoMemoryType = "None";
+    arrPC[4].videoInterface = "None";
+
+    arrPC[4].powerUnitEnergy = 45;
+
+    arrPC[4].OS = "None";
+
+    arrPC[4].price = 44499;
+
+
+    arrPC[5].pcPurpose = "Work";
+    arrPC[5].pcType = "Laptop";
+    arrPC[5].cores = 4;
+    arrPC[5].coreFrequency = 1000;
+
+    arrPC[5].coolerPower = 75;
+
+    arrPC[5].motherChipset = "None";
+
+    arrPC[5].ramGeneration = "DDR4";
+    arrPC[5].ramMemory = 8;
+    arrPC[5].ramFrequency = 3200;
+    arrPC[5].romType = "SSD";
+    arrPC[5].romMemory = 256;
+
+    arrPC[5].videoFrequency = 0;
+    arrPC[5].videoMemoryVolume = 0;
+    arrPC[5].videoMemoryType = "None";
+    arrPC[5].videoInterface = "None";
+
+    arrPC[5].powerUnitEnergy = 65;
+
+    arrPC[5].OS = "Windows 11";
+
+    arrPC[5].price = 29999;
+
+
+    arrPC[6].pcPurpose = "Education";
+    arrPC[6].pcType = "Desktop";
+    arrPC[6].cores = 6;
+    arrPC[6].coreFrequency = 3900;
+
+    arrPC[6].coolerPower = 180;
+
+    arrPC[6].motherChipset = "A520";
+
+    arrPC[6].ramGeneration = "DDR4";
+    arrPC[6].ramMemory = 16;
+    arrPC[6].ramFrequency = 3200;
+    arrPC[6].romType = "SSD";
+    arrPC[6].romMemory = 512;
+
+    arrPC[6].videoFrequency = 0;
+    arrPC[6].videoMemoryVolume = 0;
+    arrPC[6].videoMemoryType = "None";
+    arrPC[6].videoInterface = "None";
+
+    arrPC[6].powerUnitEnergy = 500;
+
+    arrPC[6].OS = "DOS";
+
+    arrPC[6].price = 39200;
+
+
+    arrPC[7].pcPurpose = "Education";
+    arrPC[7].pcType = "Desktop";
+    arrPC[7].cores = 4;
+    arrPC[7].coreFrequency = 3300;
+
+    arrPC[7].coolerPower = 130;
+
+    arrPC[7].motherChipset = "H610";
+
+    arrPC[7].ramGeneration = "DDR4";
+    arrPC[7].ramMemory = 8;
+    arrPC[7].ramFrequency = 2666;
+    arrPC[7].romType = "SSD";
+    arrPC[7].romMemory = 512;
+
+    arrPC[7].videoFrequency = 0;
+    arrPC[7].videoMemoryVolume = 0;
+    arrPC[7].videoMemoryType = "None";
+    arrPC[7].videoInterface = "None";
+
+    arrPC[7].powerUnitEnergy = 300;
+
+    arrPC[7].OS = "None";
+
+    arrPC[7].price = 30499;
+
+
+    arrPC[8].pcPurpose = "Education";
+    arrPC[8].pcType = "Desktop";
+    arrPC[8].cores = 2;
+    arrPC[8].coreFrequency = 4100;
+
+    arrPC[8].coolerPower = 120;
+
+    arrPC[8].motherChipset = "H470";
+
+    arrPC[8].ramGeneration = "DDR4";
+    arrPC[8].ramMemory = 8;
+    arrPC[8].ramFrequency = 2666;
+    arrPC[8].romType = "SSD";
+    arrPC[8].romMemory = 256;
+
+    arrPC[8].videoFrequency = 0;
+    arrPC[8].videoMemoryVolume = 0;
+    arrPC[8].videoMemoryType = "None";
+    arrPC[8].videoInterface = "None";
+
+    arrPC[8].powerUnitEnergy = 300;
+
+    arrPC[8].OS = "None";
+
+    arrPC[8].price = 21199;
+
+
+    arrPC[9].pcPurpose = "Education";
+    arrPC[9].pcType = "Laptop";
+    arrPC[9].cores = 8;
+    arrPC[9].coreFrequency = 3300;
+
+    arrPC[9].coolerPower = 80;
+
+    arrPC[9].motherChipset = "None";
+
+    arrPC[9].ramGeneration = "LPDDR4x";
+    arrPC[9].ramMemory = 16;
+    arrPC[9].ramFrequency = 4267;
+    arrPC[9].romType = "SSD";
+    arrPC[9].romMemory = 512;
+
+    arrPC[9].videoFrequency = 0;
+    arrPC[9].videoMemoryVolume = 0;
+    arrPC[9].videoMemoryType = "None";
+    arrPC[9].videoInterface = "None";
+
+    arrPC[9].powerUnitEnergy = 65;
+
+    arrPC[9].OS = "Windows 11";
+
+    arrPC[9].price = 59999;
+
+
+    arrPC[10].pcPurpose = "Education";
+    arrPC[10].pcType = "Laptop";
+    arrPC[10].cores = 4;
+    arrPC[10].coreFrequency = 2800;
+
+    arrPC[10].coolerPower = 80;
+
+    arrPC[10].motherChipset = "None";
+
+    arrPC[10].ramGeneration = "LPDDR5";
+    arrPC[10].ramMemory = 16;
+    arrPC[10].ramFrequency = 4800;
+    arrPC[10].romType = "SSD";
+    arrPC[10].romMemory = 512;
+
+    arrPC[10].videoFrequency = 0;
+    arrPC[10].videoMemoryVolume = 0;
+    arrPC[10].videoMemoryType = "None";
+    arrPC[10].videoInterface = "None";
+
+    arrPC[10].powerUnitEnergy = 45;
+
+    arrPC[10].OS = "None";
+
+    arrPC[10].price = 44499;
+
+
+    arrPC[11].pcPurpose = "Education";
+    arrPC[11].pcType = "Laptop";
+    arrPC[11].cores = 4;
+    arrPC[11].coreFrequency = 1000;
+
+    arrPC[11].coolerPower = 75;
+
+    arrPC[11].motherChipset = "None";
+
+    arrPC[11].ramGeneration = "DDR4";
+    arrPC[11].ramMemory = 8;
+    arrPC[11].ramFrequency = 3200;
+    arrPC[11].romType = "SSD";
+    arrPC[11].romMemory = 256;
+
+    arrPC[11].videoFrequency = 0;
+    arrPC[11].videoMemoryVolume = 0;
+    arrPC[11].videoMemoryType = "None";
+    arrPC[11].videoInterface = "None";
+
+    arrPC[11].powerUnitEnergy = 65;
+
+    arrPC[11].OS = "Windows 11";
+
+    arrPC[11].price = 29999;
+
+
+    arrPC[12].pcPurpose = "Education";
+    arrPC[12].pcType = "Tablet";
+    arrPC[12].cores = 8;
+    arrPC[12].coreFrequency = 3200;
+
+    arrPC[12].coolerPower = 0;
+
+    arrPC[12].motherChipset = "None";
+
+    arrPC[12].ramGeneration = "LPDDR5";
+    arrPC[12].ramMemory = 1;
+    arrPC[12].ramFrequency = 3200;
+    arrPC[12].romType = "SSD";
+    arrPC[12].romMemory = 256;
+
+    arrPC[12].videoFrequency = 0;
+    arrPC[12].videoMemoryVolume = 0;
+    arrPC[12].videoMemoryType = "None";
+    arrPC[12].videoInterface = "None";
+
+    arrPC[12].powerUnitEnergy = 0;
+
+    arrPC[12].OS = "Android";
+
+    arrPC[12].price = 30990;
+
+
+    arrPC[13].pcPurpose = "Education";
+    arrPC[13].pcType = "Tablet";
+    arrPC[13].cores = 8;
+    arrPC[13].coreFrequency = 2400;
+
+    arrPC[13].coolerPower = 0;
+
+    arrPC[13].motherChipset = "None";
+
+    arrPC[13].ramGeneration = "LPDDR4X";
+    arrPC[13].ramMemory = 6;
+    arrPC[13].ramFrequency = 1600;
+    arrPC[13].romType = "SSD";
+    arrPC[13].romMemory = 128;
+
+    arrPC[13].videoFrequency = 0;
+    arrPC[13].videoMemoryVolume = 0;
+    arrPC[13].videoMemoryType = "None";
+    arrPC[13].videoInterface = "None";
+
+    arrPC[13].powerUnitEnergy = 0;
+
+    arrPC[13].OS = "Android";
+
+    arrPC[13].price = 18797;
+
+
+    arrPC[14].pcPurpose = "Education";
+    arrPC[14].pcType = "Tablet";
+    arrPC[14].cores = 8;
+    arrPC[14].coreFrequency = 2000;
+
+    arrPC[14].coolerPower = 0;
+
+    arrPC[14].motherChipset = "None";
+
+    arrPC[14].ramGeneration = "LPDDR4X";
+    arrPC[14].ramMemory = 6;
+    arrPC[14].ramFrequency = 1600;
+    arrPC[14].romType = "SSD";
+    arrPC[14].romMemory = 128;
+
+    arrPC[14].videoFrequency = 0;
+    arrPC[14].videoMemoryVolume = 0;
+    arrPC[14].videoMemoryType = "None";
+    arrPC[14].videoInterface = "None";
+
+    arrPC[14].powerUnitEnergy = 0;
+
+    arrPC[14].OS = "Android";
+
+    arrPC[14].price = 12730;
+
+
+    arrPC[15].pcPurpose = "Gaming";
+    arrPC[15].pcType = "Desktop";
+    arrPC[15].cores = 24;
+    arrPC[15].coreFrequency = 4300;
+
+    arrPC[15].coolerPower = 190;
+
+    arrPC[15].motherChipset = "AM4";
+
+    arrPC[15].ramGeneration = "DDR4";
+    arrPC[15].ramMemory = 32;
+    arrPC[15].ramFrequency = 2666;
+    arrPC[15].romType = "SSD";
+    arrPC[15].romMemory = 1000;
+
+    arrPC[15].videoFrequency = 1320;
+    arrPC[15].videoMemoryVolume = 12;
+    arrPC[15].videoMemoryType = "GDDR6";
+    arrPC[15].videoInterface = "HDMI";
+
+    arrPC[15].powerUnitEnergy = 550;
+
+    arrPC[15].OS = "Windows";
+
+    arrPC[15].price = 124607;
+
+
+    arrPC[16].pcPurpose = "Gaming";
+    arrPC[16].pcType = "Desktop";
+    arrPC[16].cores = 16;
+    arrPC[16].coreFrequency = 3100;
+
+    arrPC[16].coolerPower = 180;
+
+    arrPC[16].motherChipset = "B760";
+
+    arrPC[16].ramGeneration = "DDR3";
+    arrPC[16].ramMemory = 16;
+    arrPC[16].ramFrequency = 1600;
+    arrPC[16].romType = "SSD";
+    arrPC[16].romMemory = 512;
+
+    arrPC[16].videoFrequency = 1257;
+    arrPC[16].videoMemoryVolume = 8;
+    arrPC[16].videoMemoryType = "GDDR6";
+    arrPC[16].videoInterface = "HDMI";
+
+    arrPC[16].powerUnitEnergy = 600;
+
+    arrPC[16].OS = "Windows";
+
+    arrPC[16].price = 66330;
+
+
+    arrPC[17].pcPurpose = "Gaming";
+    arrPC[17].pcType = "Desktop";
+    arrPC[17].cores = 6;
+    arrPC[17].coreFrequency = 2500;
+
+    arrPC[17].coolerPower = 150;
+
+    arrPC[17].motherChipset = "H610";
+
+    arrPC[17].ramGeneration = "DDR4";
+    arrPC[17].ramMemory = 16;
+    arrPC[17].ramFrequency = 3200;
+    arrPC[17].romType = "SSD";
+    arrPC[17].romMemory = 512;
+
+    arrPC[17].videoFrequency = 1410;
+    arrPC[17].videoMemoryVolume = 4;
+    arrPC[17].videoMemoryType = "GDDR6";
+    arrPC[17].videoInterface = "HDMI";
+
+    arrPC[17].powerUnitEnergy = 500;
+
+    arrPC[17].OS = "None";
+
+    arrPC[17].price = 55999;
+
+
+    arrPC[18].pcPurpose = "Gaming";
+    arrPC[18].pcType = "Laptop";
+    arrPC[18].cores = 8;
+    arrPC[18].coreFrequency = 2000;
+
+    arrPC[18].coolerPower = 70;
+
+    arrPC[18].motherChipset = "None";
+
+    arrPC[18].ramGeneration = "DDR5";
+    arrPC[18].ramMemory = 16;
+    arrPC[18].ramFrequency = 4800;
+    arrPC[18].romType = "SSD";
+    arrPC[18].romMemory = 512;
+
+    arrPC[18].videoFrequency = 2250;
+    arrPC[18].videoMemoryVolume = 8;
+    arrPC[18].videoMemoryType = "GDDR6";
+    arrPC[18].videoInterface = "None";
+
+    arrPC[18].powerUnitEnergy = 105;
+
+    arrPC[18].OS = "None";
+
+    arrPC[18].price = 110999;
+
+
+    arrPC[19].pcPurpose = "Gaming";
+    arrPC[19].pcType = "Laptop";
+    arrPC[19].cores = 12;
+    arrPC[19].coreFrequency = 2500;
+
+    arrPC[19].coolerPower = 75;
+
+    arrPC[19].motherChipset = "None";
+
+    arrPC[19].ramGeneration = "DDR4";
+    arrPC[19].ramMemory = 16;
+    arrPC[19].ramFrequency = 3200;
+    arrPC[19].romType = "SSD";
+    arrPC[19].romMemory = 512;
+
+    arrPC[19].videoFrequency = 1790;
+    arrPC[19].videoMemoryVolume = 4;
+    arrPC[19].videoMemoryType = "GDDR6";
+    arrPC[19].videoInterface = "None";
+
+    arrPC[19].powerUnitEnergy = 200;
+
+    arrPC[19].OS = "None";
+
+    arrPC[19].price = 78999;
+
+
+    arrPC[20].pcPurpose = "Gaming";
+    arrPC[20].pcType = "Laptop";
+    arrPC[20].cores = 8;
+    arrPC[20].coreFrequency = 2000;
+
+    arrPC[20].coolerPower = 75;
+
+    arrPC[20].motherChipset = "None";
+
+    arrPC[20].ramGeneration = "DDR5";
+    arrPC[20].ramMemory = 8;
+    arrPC[20].ramFrequency = 4800;
+    arrPC[20].romType = "SSD";
+    arrPC[20].romMemory = 256;
+
+    arrPC[20].videoFrequency = 1477;
+    arrPC[20].videoMemoryVolume = 4;
+    arrPC[20].videoMemoryType = "GDDR6";
+    arrPC[20].videoInterface = "None";
+
+    arrPC[20].powerUnitEnergy = 150;
+
+    arrPC[20].OS = "None";
+
+    arrPC[20].price = 68999;
+
+
+    arrPC[21].pcPurpose = "Gaming";
+    arrPC[21].pcType = "Tablet";
+    arrPC[21].cores = 8;
+    arrPC[21].coreFrequency = 3200;
+
+    arrPC[21].coolerPower = 0;
+
+    arrPC[21].motherChipset = "None";
+
+    arrPC[21].ramGeneration = "LPDDR5";
+    arrPC[21].ramMemory = 1;
+    arrPC[21].ramFrequency = 3200;
+    arrPC[21].romType = "SSD";
+    arrPC[21].romMemory = 256;
+
+    arrPC[21].videoFrequency = 0;
+    arrPC[21].videoMemoryVolume = 0;
+    arrPC[21].videoMemoryType = "None";
+    arrPC[21].videoInterface = "None";
+
+    arrPC[21].powerUnitEnergy = 0;
+
+    arrPC[21].OS = "Android";
+
+    arrPC[21].price = 30990;
+
+
+    arrPC[22].pcPurpose = "Gaming";
+    arrPC[22].pcType = "Tablet";
+    arrPC[22].cores = 8;
+    arrPC[22].coreFrequency = 2400;
+
+    arrPC[22].coolerPower = 0;
+
+    arrPC[22].motherChipset = "None";
+
+    arrPC[22].ramGeneration = "LPDDR4X";
+    arrPC[22].ramMemory = 6;
+    arrPC[22].ramFrequency = 1600;
+    arrPC[22].romType = "SSD";
+    arrPC[22].romMemory = 128;
+
+    arrPC[22].videoFrequency = 0;
+    arrPC[22].videoMemoryVolume = 0;
+    arrPC[22].videoMemoryType = "None";
+    arrPC[22].videoInterface = "None";
+
+    arrPC[22].powerUnitEnergy = 0;
+
+    arrPC[22].OS = "Android";
+
+    arrPC[22].price = 18797;
+
+
+    arrPC[23].pcPurpose = "Gaming";
+    arrPC[23].pcType = "Tablet";
+    arrPC[23].cores = 8;
+    arrPC[23].coreFrequency = 2000;
+
+    arrPC[23].coolerPower = 0;
+
+    arrPC[23].motherChipset = "None";
+
+    arrPC[23].ramGeneration = "LPDDR4X";
+    arrPC[23].ramMemory = 6;
+    arrPC[23].ramFrequency = 1600;
+    arrPC[23].romType = "SSD";
+    arrPC[23].romMemory = 128;
+
+    arrPC[23].videoFrequency = 0;
+    arrPC[23].videoMemoryVolume = 0;
+    arrPC[23].videoMemoryType = "None";
+    arrPC[23].videoInterface = "None";
+
+    arrPC[23].powerUnitEnergy = 0;
+
+    arrPC[23].OS = "Android";
+
+    arrPC[23].price = 12730;
+
+
+    arrPC[24].pcPurpose = "Development";
+    arrPC[24].pcType = "Desktop";
+    arrPC[24].cores = 24;
+    arrPC[24].coreFrequency = 4300;
+
+    arrPC[24].coolerPower = 190;
+
+    arrPC[24].motherChipset = "AM4";
+
+    arrPC[24].ramGeneration = "DDR4";
+    arrPC[24].ramMemory = 32;
+    arrPC[24].ramFrequency = 2666;
+    arrPC[24].romType = "SSD";
+    arrPC[24].romMemory = 1000;
+
+    arrPC[24].videoFrequency = 1320;
+    arrPC[24].videoMemoryVolume = 12;
+    arrPC[24].videoMemoryType = "GDDR6";
+    arrPC[24].videoInterface = "HDMI";
+
+    arrPC[24].powerUnitEnergy = 550;
+
+    arrPC[24].OS = "Windows";
+
+    arrPC[24].price = 124607;
+
+
+    arrPC[25].pcPurpose = "Development";
+    arrPC[25].pcType = "Desktop";
+    arrPC[25].cores = 16;
+    arrPC[25].coreFrequency = 3100;
+
+    arrPC[25].coolerPower = 180;
+
+    arrPC[25].motherChipset = "B760";
+
+    arrPC[25].ramGeneration = "DDR3";
+    arrPC[25].ramMemory = 16;
+    arrPC[25].ramFrequency = 1600;
+    arrPC[25].romType = "SSD";
+    arrPC[25].romMemory = 512;
+
+    arrPC[25].videoFrequency = 1257;
+    arrPC[25].videoMemoryVolume = 8;
+    arrPC[25].videoMemoryType = "GDDR6";
+    arrPC[25].videoInterface = "HDMI";
+
+    arrPC[25].powerUnitEnergy = 600;
+
+    arrPC[25].OS = "Windows";
+
+    arrPC[25].price = 66330;
+
+
+    arrPC[26].pcPurpose = "Development";
+    arrPC[26].pcType = "Desktop";
+    arrPC[26].cores = 6;
+    arrPC[26].coreFrequency = 2500;
+
+    arrPC[26].coolerPower = 150;
+
+    arrPC[26].motherChipset = "H610";
+
+    arrPC[26].ramGeneration = "DDR4";
+    arrPC[26].ramMemory = 16;
+    arrPC[26].ramFrequency = 3200;
+    arrPC[26].romType = "SSD";
+    arrPC[26].romMemory = 512;
+
+    arrPC[26].videoFrequency = 1410;
+    arrPC[26].videoMemoryVolume = 4;
+    arrPC[26].videoMemoryType = "GDDR6";
+    arrPC[26].videoInterface = "HDMI";
+
+    arrPC[26].powerUnitEnergy = 500;
+
+    arrPC[26].OS = "None";
+
+    arrPC[26].price = 55999;
+
+
+    int step = 0;
+    string purpose;
+    string typepc;
+    int wallet;
+    int len = sizeof(arrPC)/sizeof(arrPC[0]);
+    
+    while (step >= 0) {
+        std::cout << "Вас приветствует Автономный Обозреватель Персональных Компьютеров. Я помогу вам выбрать ПК вашей мечты, или по размерам вашего кошелька!" << endl
+            << "Пожалуйста, введите вариант назначение вашего ПК: (1)Работа, (2)Обучение, (3)Развлечение, (4)Хобби и Творчество." << endl;
+        int input1;
+        cin >> input1;
+        switch (input1)
+        {
+        case 1:
+            purpose = "Work";
+            break;
+        case 2:
+            purpose = "Education";
+            break;
+        case 3:
+            purpose = "Gaming";
+            break;
+        case 4:
+            purpose = "Development";
+            break;
+        default:
+            std::cout << "Ошибка ввода, попробуйте еще раз." << endl;
+            std::cin >> input1;
+            continue;
+        }
+
+        std::cout << "Пожалуйста, введите тип желаемого ПК: (1)Десктоп, (2)Ноутбук, (3)Планшет." << endl;
+        std::cin >> input1;
+        switch (input1)
+        {
+        case 1:
+            typepc = "Desktop";
+            break;
+        case 2:
+            typepc = "Laptop";
+            break;
+        case 3:
+            typepc = "Tablet";
+            break;
+        default:
+            std::cout << "Ошибка ввода, попробуйте еще раз." << endl;
+            std::cin >> input1;
+            continue;
+        }
+
+        std::cout << "Пожалуйста, введите желаемую максимальную цену." << endl;
+        std::cin >> wallet;
+
+        for (int i = 0; i < len; i++) {
+            if (purpose==arrPC[i].pcPurpose&&typepc==arrPC[i].pcType&&wallet<=arrPC[i].price) {
+                cout << "Назначение ПК: " << arrPC[i].pcPurpose << endl
+                    << "Тип ПК: " << arrPC[i].pcType << endl
+                    << "Количество ядер: " << arrPC[i].cores << endl
+                    << "Частота процессора (МГц): " << arrPC[i].coreFrequency << endl
+                    << "Мощность кулера (Вт): " << arrPC[i].coolerPower << endl
+                    << "Чипсет материнской платы: " << arrPC[i].motherChipset << endl
+                    << "Поколение ОЗУ: " << arrPC[i].ramGeneration << endl
+                    << "Оперативная память: " << arrPC[i].ramMemory << endl
+                    << "Частота ОЗУ (ГГц)" << arrPC[i].coreFrequency << endl
+                    << "Тип постоянной памяти: " << arrPC[i].romType << endl
+                    << "Объем постоянной памяти(Гб): " << arrPC[i].romMemory << endl
+                    << "Частота работы видеочипа: " << arrPC[i].videoFrequency << endl
+                    << "Объем видеопамяти: " << arrPC[i].videoMemoryVolume << endl
+                    << "Тип видеопамяти: " << arrPC[i].videoMemoryType << endl
+                    << "Интерфейс видеокарты: " << arrPC[i].videoInterface << endl
+                    << "Мощность блока питания: " << arrPC[i].powerUnitEnergy << endl
+                    << "Операционная система: " << arrPC[i].OS << endl
+                    << "Цена: " << arrPC[i].price << endl;
+            }
+            else
+            {
+                continue;
+            }
+        }
+        break;
+        
+    }
+    
+}
